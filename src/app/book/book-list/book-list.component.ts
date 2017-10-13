@@ -25,7 +25,3 @@ export class BookListComponent implements OnInit {
 
 
   }
-
-  export class Publisher{
-    constructor(name: string, url: string){}
-  }

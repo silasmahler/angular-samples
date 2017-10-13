@@ -1,5 +1,3 @@
-import {Publisher} from "../book-list/book-list.component";
-
 export interface Book {
   title: string;
   subtitle: string;
@@ -7,5 +5,7 @@ export interface Book {
   abstract?: string;
   numPages?: number;
   author?: string;
-  publisher?: Publisher;
-}
+  publisher: {
+    name: string;
+    url: string;
+  }}
