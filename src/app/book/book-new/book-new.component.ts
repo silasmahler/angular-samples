@@ -29,7 +29,7 @@ export class BookNewComponent implements OnInit {
           isbn: '',
           title: this.form.value.title,
           author: this.form.value.author,
-          subtitle: '',
+          subtitle: this.form.value.subtitle,
           abstract: '',
           numPages: 123,
           publisher: {
