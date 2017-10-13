@@ -10,6 +10,7 @@ import { BookDataService } from './book/shared/book-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { routing } from './app.routing';
 import { BookDetailComponent } from './book/book-detail/book-detail.component'
+import { ConfirmCandeactivateGuard } from './book/shared/confirm-candeactivate.guard';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BookDetailComponent } from './book/book-detail/book-detail.component'
     HttpClientModule,
     routing
     ],
-  providers: [BookDataService],
+  providers: [
+    BookDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
