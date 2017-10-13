@@ -10,6 +10,11 @@ export class BookDataService {
   constructor(private http: HttpClient) {}
 
   getBooks(): Observable<Book[]> {
-    return this.http.get<Book[]>('http://localhost:4730/books')
+    return this.http.get<Book[]>(`http://localhost:4730/books`)
   }
+
+  getBookByIsbn(isbn: string): Observable<Book>{
+    return this.http.get<Book>(`http://localhost:4730/books/${isbn}`);
+  }
+
 }

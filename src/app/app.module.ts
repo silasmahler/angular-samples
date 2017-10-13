@@ -8,7 +8,8 @@ import { TitleBoxComponent } from './title-box/title-box.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookDataService } from './shared/book-data.service';
 import { HttpClientModule } from '@angular/common/http';
-import { routing } from './app.routing'
+import { routing } from './app.routing';
+import { BookDetailComponent } from './book-detail/book-detail.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { routing } from './app.routing'
     InfoBoxComponent,
     MouseCursorComponent,
     TitleBoxComponent,
-    BookListComponent
+    BookListComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
