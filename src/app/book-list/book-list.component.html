@@ -2,16 +2,8 @@
   book-list works!
 </p>
 
-<div class="row"
-     *ngFor="let book of booklist">
-  <div class="col-xs-12">
+<ul>
+  <li *ngFor="let book of booklist | async">
     <a>{{book.title}}</a>
-    <a>{{book.subtitle}}</a>
-    <a>{{book.isbn}}</a>
-    <a>{{book.abstract}}</a>
-    <a>{{book.numPages}}</a>
-    <a>{{book.author}}</a>
-    <a>{{book.publisher.name}}</a>
-    <a>{{book.publisher.url}}</a>
-  </div>
-</div>
+  </li>
+</ul>
