@@ -17,8 +17,12 @@ export class BookDataService {
     return this.http.get<Book>(`http://localhost:4730/books/${isbn}`);
   }
 
-
   updateBook(isbn: string, value: string): Observable<Book>{
     return this.http.patch<Book>(`http://localhost:4730/books/${isbn}`, value);
   }
+
+  createBook(book: Book): Observable<Book>{
+    return this.http.post<Book>(`http://localhost:4730/books`, book)
+  }
+
 }
