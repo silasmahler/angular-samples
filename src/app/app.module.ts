@@ -10,7 +10,6 @@ import { BookDataService } from './book/shared/book-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { routing } from './app.routing';
 import { BookDetailComponent } from './book/book-detail/book-detail.component'
-import { BookModule } from './book/book.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { BookModule } from './book/book.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing,
-    BookModule
+    routing
     ],
   providers: [BookDataService],
   bootstrap: [AppComponent]
