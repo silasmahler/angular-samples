@@ -1,12 +1,31 @@
 <h2>Edit</h2>
 <div *ngIf="book">
-  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-    <input type="text" name="isbn" #isbn="ngModel" [(ngModel)]="book.isbn" required/><br />
-    <span [hidden]="!isbn.errors?.required">ISBN is required</span><br />
-    <input type="text" name="title" #title="ngModel" [(ngModel)]="book.title" required/><br />
-    <span [hidden]="!title.errors?.required">Title is required</span><br />
-    <input type="text" name="author" #author="ngModel" [(ngModel)]="book.author" required/><br />
-    <span [hidden]="!author.errors?.required">Author is required</span><br />
-    <button [disabled]="!form.valid" type="submit">Save</button>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" class="row">
+    <div class="col-sx-2">
+        ISBN
+        <input type="text" name="isbn" #isbn="ngModel" [(ngModel)]="book.isbn" required/><br />
+        <span [hidden]="!isbn.errors?.required">ISBN is required</span><br />
+    </div>
+    <div class="col-sx-2">
+        Titel
+        <input type="text" name="title" #title="ngModel" [(ngModel)]="book.title" required/><br />
+        <span [hidden]="!title.errors?.required">Title is required</span><br />
+        <div [hidden]="!title.errors?.required || title.pristine"></div>
+    </div>
+    <div class="col-sx-2">
+        Abstract  
+        <input type="text" name="abstract" #title="ngModel" [(ngModel)]="book.abstract"/><br />
+    </div>
+    <div class="col-sx-2">
+        
+        Author
+        <input type="text" name="author" #author="ngModel" [(ngModel)]="book.author" required/><br />
+        <span [hidden]="!author.errors?.required">Author is required</span><br />
+       
+    </div>
+    
+    <div class="col-sx-2">
+        <button [disabled]="!form.valid" type="submit">Save</button>
+    </div>
   </form>
 </div>
