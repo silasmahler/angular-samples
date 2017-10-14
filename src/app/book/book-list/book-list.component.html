@@ -4,8 +4,7 @@
 
 <ul>
   <li class="rowBorder" *ngFor="let book of booklist | async">
-    <a [routerLink]="[book.isbn]">{{book.title}} </a>    
+    <a [routerLink]="[book.isbn]">{{book.title | shout: 'WOHO Im ignored!!!' }} </a>    
   </li>
 </ul>
-
 <a [routerLink]="['new']">New Book</a>

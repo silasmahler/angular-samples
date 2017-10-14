@@ -1,3 +1,4 @@
+import { ShoutPipe } from '../shared/shout.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -22,8 +23,10 @@ import { BookNewComponent } from './book-new/book-new.component';
   BookListComponent,
   BookDetailComponent,
   BookEditComponent,
-  BookNewComponent],
-  providers:[
+  BookNewComponent,
+  ShoutPipe
+  ],
+  providers: [
   ConfirmCandeactivateGuard
   ]
 })

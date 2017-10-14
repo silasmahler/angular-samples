@@ -12,6 +12,7 @@ import { routing } from './app.routing';
 import { BookDetailComponent } from './book/book-detail/book-detail.component'
 import { ConfirmCandeactivateGuard } from './book/shared/confirm-candeactivate.guard';
 import { TooltipDirective } from './shared/tooltip.directive';
+import { ShoutPipe } from './shared/shout.pipe';
 
 @NgModule({
   declarations: [
