@@ -3,7 +3,7 @@
 </p>
 
 <ul>
-  <li *ngFor="let book of booklist | async">
+  <li class="rowBorder" *ngFor="let book of booklist | async">
     <a [routerLink]="[book.isbn]">{{book.title}} </a>    
   </li>
 </ul>
