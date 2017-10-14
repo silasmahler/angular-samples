@@ -1,3 +1,6 @@
+import { BookDataService } from '../shared/book-data.service';
+import { BookDataServiceMock } from '../shared/book-data-mock.service';
+import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookDetailComponent } from './book-detail.component';
@@ -8,7 +11,9 @@ describe('BookDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookDetailComponent ]
+      imports: [RouterTestingModule],
+      declarations: [ BookDetailComponent ],
+      providers: [{provide: BookDataService, useClass: BookDataServiceMock}]
     })
     .compileComponents();
   }));
