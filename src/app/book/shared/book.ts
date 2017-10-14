@@ -8,4 +8,5 @@ export interface Book {
   publisher: {
     name: string;
     url: string;
-  }}
+  }
+}
