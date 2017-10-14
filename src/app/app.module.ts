@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { routing } from './app.routing';
 import { BookDetailComponent } from './book/book-detail/book-detail.component'
 import { ConfirmCandeactivateGuard } from './book/shared/confirm-candeactivate.guard';
+import { TooltipDirective } from './shared/tooltip.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ConfirmCandeactivateGuard } from './book/shared/confirm-candeactivate.g
     InfoBoxComponent,
     MouseCursorComponent,
     TitleBoxComponent,
+    TooltipDirective,
   ],
   imports: [
     BrowserModule,
